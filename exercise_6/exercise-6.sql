@@ -8,14 +8,14 @@ film
 LEFT JOIN
 inventory
 ON
-film.film_id = inventory.inventory_id
+film.film_id = inventory.film_id
 LEFT JOIN
 rental
 ON
 inventory.inventory_id = rental.inventory_id
 LEFT JOIN
 customer
-ON
+ON 
 rental.customer_id = customer.customer_id
-WHERE 
-customer.first_name = 'Roberta'
+WHERE
+first_name = 'Roberta'
